@@ -3252,6 +3252,7 @@ fieldset[disabled] .btn-success.active {
 .btn-success .badge {
   color: #5cb85c;
   background-color: #fff;
+  
 }
 .btn-info {
   color: #fff;
@@ -3486,10 +3487,11 @@ fieldset[disabled] .btn-link:focus {
 }
 .btn-lg,
 .btn-group-lg > .btn {
-  padding: 10px 16px;
-  font-size: 18px;
+  padding: 16px 16px;
+  font-size: 72px;
   line-height: 1.3333333;
-  border-radius: 6px;
+  border-radius: 10px;
+
 }
 .btn-sm,
 .btn-group-sm > .btn {
