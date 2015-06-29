@@ -1,6 +1,6 @@
 html, body{
-    margin: 0;
-    height: 100%;
+    /*margin: 0;
+    height: 100%;*/
 }
 
 body{
@@ -15,14 +15,26 @@ body{
 }*/
 
 #all_squares{
+    /*margin: 0 auto;*/
     /*position: absolute;*/
     margin-top: 25px;
     /*transform: translateY(-50%);*/
+
 }
 
 #all_squares > div > div{
     padding-left: 2px;
     padding-right: 2px;
+}
+
+#sideText{
+    padding-top: 73px;
+}
+
+#sideText p{
+    text-align: center;
+    padding-top: 72px;
+    padding-bottom: 72px;
 }
 
 #overview p{
