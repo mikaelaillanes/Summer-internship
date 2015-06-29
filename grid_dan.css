@@ -1,0 +1,55 @@
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+body{
+    background-color: black;
+}
+
+/*.container{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    position: relative;
+}*/
+
+#all_squares{
+    /*position: absolute;*/
+    margin-top: 25px;
+    /*transform: translateY(-50%);*/
+}
+
+#all_squares > div > div{
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+#overview p{
+    text-align: center;
+
+}
+
+p { color: white; font-family: 'Muli', sans-serif; margin-bottom: 15px; }
+.row{
+    padding-bottom: 2px;
+    padding-top: 2px;
+
+}
+
+
+/*Creates a square*/
+.square{
+	/*width: 100%;*/
+    padding-top: 100%;
+	background: green;
+    border-radius: 5px;
+}
+
+/*.square:hover >h2 {
+    display: none;
+}
+
+.square:hover >h2 {
+    display: inline;
+}*/
