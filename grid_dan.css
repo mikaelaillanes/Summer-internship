@@ -7,6 +7,12 @@ body{
     background-color: black;
 }
 
+p { 
+    color: white; 
+    font-family: 'Muli', 
+    sans-serif; 
+    margin-bottom: 15px; }
+
 /*.container{
     margin-top: 0px;
     margin-bottom: 0px;
@@ -14,54 +20,64 @@ body{
     position: relative;
 }*/
 
-#all_squares{
-    /*margin: 0 auto;*/
-    /*position: absolute;*/
-    margin-top: 25px;
-    /*transform: translateY(-50%);*/
 
-}
-
-#all_squares > div > div{
-    padding-left: 2px;
-    padding-right: 2px;
-}
-
+/*The text on the side*/
 #sideText{
     padding-top: 73px;
 }
 
 #sideText p{
     text-align: center;
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+/*End text on the side*/
+
+/*Creates a square*/
+.square{
+    padding-top: 100%;
+    background: green;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-#overview p{
+
+
+/*Hides the test squares initially*/
+.tests{
+    display:none;    
+}
+
+
+#square_container{
+    margin-top: 25px;
+    /*margin: 0 auto;*/
+    /*position: absolute;*/
+    /*transform: translateY(-50%);*/
+
+}
+
+#square_container p{
     text-align: center;
 
 }
 
-p { color: white; font-family: 'Muli', sans-serif; margin-bottom: 15px; }
+/*Fixing the spacing between squares*/
+#square_container > div {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+#square_container > div > div,.tests >div {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
 .row{
     padding-bottom: 2px;
     padding-top: 2px;
 
 }
+/*End fixing the spacing between squares*/
 
 
-/*Creates a square*/
-.square{
-	/*width: 100%;*/
-    padding-top: 100%;
-	background: green;
-    border-radius: 5px;
-}
-
-/*.square:hover >h2 {
-    display: none;
-}
-
-.square:hover >h2 {
-    display: inline;
-}*/
