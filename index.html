@@ -1,126 +1,219 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 <head>
-	<title>Radiator 2.0</title>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css"> 
-	<link rel="stylesheet" href="test.css"> 
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Radiator 2.0</title>
+    <link rel="stylesheet" href="styles.css"</link>
+    <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css"/> 
+    <link rel="stylesheet" href="grid_dan.css"/> 
+    <script src="jquery-1.11.3.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".overview").click(function(){
+                $("~.tests",this).toggle();
+            });
+        });
+    </script>
 </head>
 <body>
-<div class="container">
-  <div id="all_squares">
-  	<div id="overview" class="row">
+    <div class="container">
+        <div class="row passedTest" style ="display: none;">
+            <div id="sideText" class="col-md-1">
+                <p>Overview</p>
+                <p>ST</p>
+                <p>FT</p>
+                <p>RST</p>
+            </div>
+            <div id="square_container" class="row col-md-11 container">
+                <div id="master_Column" class="row col-md-2">
+                    <div id="master" class="overview col-md-12" >
+                        <p>Master</p><div class="square"></div>
+                    </div>
 
-        <div id="master" class="col-md-2" >
-        	<p>Master</p>
-        	<div class="square"></div>
-        </div>
+                    <div class="tests">
+                        <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
 
-        <div id="monday" class="col-md-2">
-        	<p>Monday</p>
-        	<div class="square"></div>
-        </div>
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
 
-         <div id="tuesday" class="col-md-2">
-         	<p>Tuesday</p>
-        	<div class="square"></div>
-        </div>
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+                    </div>
+                </div>
 
-         <div id="wednesday" class="col-md-2">
-         	<p>Wednesday</p>
-        	<div class="square"></div>
-        </div>
+                <div id="monday_Column" class="row col-md-2">
+                    <div id="monday" class="overview col-md-12" >
+                        <p>Monday</p><div class="square"></div>
+                    </div>
 
-         <div id="thursday"class="col-md-2">
-         	<p>Thursday</p>
-        	<div class="square"></div>
-        </div>
+                    <div class="tests">
+                        <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
 
-        <div id="friday" class="col-md-2">
-        	<p>Friday</p>
-        	<div class="square"></div>
-        </div>
-    </div> <!-- End Overview-->
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="tuesday_Column" class="row col-md-2">
+                    <div id="tuesday" class="overview col-md-12" >
+                        <p>Tuesday</p><div class="square"></div>
+                    </div>
+
+                    <div class="tests">
+                        <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div id="wedneday_Column" class="row col-md-2">
+                    <div id="wedneday" class="overview col-md-12" >
+                        <p>Wednesday</p><div class="square"></div>
+                    </div>
+
+                    <div class="tests">
+                        <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="thursday_Column" class="row col-md-2">
+                    <div id="thursday" class="overview col-md-12" >
+                        <p>Thursday</p><div class="square"></div>
+                    </div>
+
+                    <div class="tests">
+                        <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+                    </div>    
+                </div>
+
+                <div id="friday_Column" class="row col-md-2">
+                    <div id="friday" class="overview col-md-12" >
+                        <p>Friday</p><div class="square"></div>
+                    </div>
+
+                    <div class="tests">
+                        <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+
+                         <div class="col-md-12" >
+                            <div class="square"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!--End square_container -->
+        </div>    <!--End row-->
+        <div id="passedTest" style ="display: block;" > <!-- Start container passed test-->
+            <div class="row">
+                <div class="col-md-2">
+                    <button type="button" class="button btn btn-success"><h2>RT</h2></button>
+                </div>
+                <div class="col-md-7">
+                    <h1>Information about passed tests</h1>
+                    <li class = "lista">Suit name:</li>
+                    <li class = "lista">Run by:</li>
+                    <li class = "lista">Time started:</li>
+                    <li class = "lista">Time finished:</li>
+                    <li class = "lista">Duration:</li>
+                </div>
+                <div class="col-md-3 search">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search for...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="list-group orient">
+                  <a href="#" class="list-group-item list-group-item-success">test 1</a>
+                  <a href="#" class="list-group-item list-group-item-success">test 2</a>
+                  <a href="#" class="list-group-item list-group-item-success">test 3</a>
+                  <a href="#" class="list-group-item list-group-item-success">test 4</a>
+                </div>
+            </div>
+        </div>  <!-- end container passed test-->
+        <div id="failedTest" style ="display: none;"> 
+            <div class="row"> 
+                <div class="col-md-2">
+                    <button type="button" class="button btn btn-danger"><h2>RT</h2></button>
+                </div>
+                <div class="col-md-7">
+                <h1>Information about faild tests</h1>
+                <h3>First faild test information:</h3>
+                    <li class = "lista">Time:</li>
+                    <li class = "lista">Where has it failed:</li>
+                    <li class = "lista">What has failed:</li>
+                </div>
+                <div class="col-md-3 search">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Go!</button>
+                        </span>
+                        <input type="text" class="form-control" placeholder="Search for...">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="list-group orient">
+                  <a href="#" class="list-group-item list-group-item-danger">test 1</a>
+                  <a href="#" class="list-group-item list-group-item-danger">test 2</a>
+                  <a href="#" class="list-group-item list-group-item-success">test 3</a>
+                  <a href="#" class="list-group-item list-group-item-danger">test 4</a>
+                </div>
+            </div>
+        </div> <!--End not passed test-->
+    </div> <!--End container -->
     
-    <div id="ST" class="row">
-    	<div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-         <div class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-         <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-    </div> <!-- End ST-->
-    
-    <div id="FT" class="row">
-    	<div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-         <div class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-         <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-    </div> <!-- End FT-->
-
-    <div id="RST" class="row">
-    	<div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-         <div class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-         <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-
-        <div  class="col-md-2">
-        	<div class="square"></div>
-        </div>
-    </div> <!-- End RST-->
-
-  </div> <!--End all_square -->
-</div> <!-- End container -->
 </body>
 </html>
