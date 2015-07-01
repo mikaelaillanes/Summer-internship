@@ -8,10 +8,12 @@ body{
 }
 
 p { 
-    color: white; 
+    color: black; 
     font-family: 'Muli', 
     sans-serif; 
-    margin-bottom: 15px; }
+    margin-bottom: 15px; 
+    text-align: center;
+    }
 
 /*.container{
     margin-top: 0px;
@@ -27,34 +29,46 @@ p {
 }
 
 #sideText p{
-    text-align: center;
     padding-top: 55px;
     padding-bottom: 55px;
 }
 /*End text on the side*/
 
-/*Creates a square*/
-.square{
-    /*padding-top: 100%;*/
-    width: 133px;
-    height: 133px;
-    background: green;
-    border-radius: 5px;
-    cursor: pointer;
-}
+
 
 .square > p{
-    display: flex;
+ /*   display: flex;
     justify-content: center;
-    flex-direction: column;
-    height: 133px;
-    font-size: 400%;
+    flex-direction: column;*/
+    /*height: 100px;*/
+    line-height: 133px;
+    font-size: 100px;
     display: none;
+    color: white;
 
 }
+/*Creates a square*/
+.square{
+    height: 133px;
+    width: 133px;
+    background: #0ACF00;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 auto;
+}
 
-.flex-center-vertically {
-  
+.square:hover{
+    background-color: #43E73A;
+}
+
+.square.fail:hover{
+    background-color: #FE3F44;
+}
+
+
+
+.fail{
+    background-color: #FD0006;
 }
 
 
@@ -72,15 +86,15 @@ p {
 
 }
 
-#square_container p{
-    text-align: center;
 
-}
 
 /*Fixing the spacing between squares*/
+
+/*The columns*/
 #square_container > div {
     padding-left: 5px;
     padding-right: 5px;
+    height: 100px;
 }
 
 #square_container > div > div{
@@ -105,4 +119,7 @@ p {
 }
 /*End fixing the spacing between squares*/
 
-
+-webkit-user-select: none;
+-moz-user-select: none;
+-khtml-user-select: none;
+-ms-user-select: none;
