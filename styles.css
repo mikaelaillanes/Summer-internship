@@ -2,7 +2,7 @@ html, body{
 
 }
 body{
-    background-color: black;
+    background-color: white;
 }
 /*Default paragraph styles*/
 p {
@@ -125,4 +125,7 @@ code {
   margin-left: 40px;
 }
 .passedTest {
+      background-color: white;
+      width: auto;
+      height: auto;
 }
