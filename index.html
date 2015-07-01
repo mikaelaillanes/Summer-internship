@@ -22,214 +22,244 @@
     </script>
         <script>
         $(document).ready(function(){
-            $(".tests").click(function(){
+            $(".passed").click(function(){
                 $("#passedTest").toggle();
                 $("#radiator").toggle();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#failedButton").click(function(){
+                $("#radiator").toggle();
+                $("#failedTest").toggle();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                 $("#radiator").toggle();
+                $(this).parent().parent().parent().toggle();
             });
         });
     </script>
 </head>
 <body>
     <div class="container">
-        <div class="row" id= "radiator" style ="display: block;">
+       <div id="radiator" class="row">
             <div id="sideText" class="col-md-1">
                 <p>Overview</p>
                 <p>ST</p>
                 <p>FT</p>
                 <p>RST</p>
             </div>
-            <div id="square_container" class="row col-md-11 container">
-                <div id="master_Column" class="row col-md-2">
-                    <div id="master" class="overview col-md-12" >
-                        <p>Master</p><div class="square"></div>
-                    </div>
-
-                    <div class="tests">
-                        <div class="col-md-12" >
-                            <div>
-                                <button type="button" class="square btn btn-success" id="hi"><h2>RT</h2></button>
-                            </div>
+            <div id="square_container" class="row col-md-11 container-fluid">
+                    <div id="master_Column" class="col-md-2">
+                        <div class="overview col-md-12" >
+                            <p>Master</p><div class="square"><p>0</p></div>
                         </div>
 
-                         <div class="col-md-12" >
-                            <div>
-                                <button type="button" class="square btn btn-success"><h2>RT</h2></button>
+                        <div class="tests">
+                            <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
                             </div>
-                        </div>
 
-                         <div class="col-md-12" >
-                            <div>
-                                <button type="button" class="square btn btn-success"><h2>RT</h2></button>
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <div id="monday_Column" class="row col-md-2">
-                    <div id="monday" class="overview col-md-12" >
-                        <p>Monday</p><div class="square"></div>
+                    <div id="monday_Column" class="col-md-2">
+                        <div class="overview col-md-12" >
+                            <p>Monday</p><div class="square"><p>0</p></div>
+                        </div>
+
+                        <div class="tests">
+                            <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+                        </div>
+                        
                     </div>
 
-                    <div class="tests">
-                        <div class="col-md-12" >
-                            <div class="square"></div>
+                    <div id="tuesday_Column" class="col-md-2">
+                        <div class="overview col-md-12" >
+                            <p>Tuesday</p><div class="square"><p>0</p></div>
                         </div>
 
-                         <div class="col-md-12" >
-                            <div class="square"></div>
+                        <div class="tests">
+                            <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
                         </div>
-
-                         <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div id="tuesday_Column" class="row col-md-2">
-                    <div id="tuesday" class="overview col-md-12" >
-                        <p>Tuesday</p><div class="square"></div>
-                    </div>
-
-                    <div class="tests">
-                        <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-
-                         <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-
-                         <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div id="wedneday_Column" class="row col-md-2">
-                    <div id="wedneday" class="overview col-md-12" >
-                        <p>Wednesday</p><div class="square"></div>
+                        
                     </div>
 
-                    <div class="tests">
-                        <div class="col-md-12" >
-                            <div class="square"></div>
+                    <div id="wedneday_Column" class="col-md-2">
+                        <div class="overview col-md-12" >
+                            <p>Wednesday</p><div class="square"><p>0</p></div>
                         </div>
 
-                         <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
+                        <div class="tests">
+                            <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
 
-                         <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-                    </div>
-                </div>
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
 
-                <div id="thursday_Column" class="row col-md-2">
-                    <div id="thursday" class="overview col-md-12" >
-                        <p>Thursday</p><div class="square"></div>
-                    </div>
-
-                    <div class="tests">
-                        <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-
-                         <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-
-                         <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-                    </div>    
-                </div>
-
-                <div id="friday_Column" class="row col-md-2">
-                    <div id="friday" class="overview col-md-12" >
-                        <p>Friday</p><div class="square"></div>
-                    </div>
-
-                    <div class="tests">
-                        <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-
-                         <div class="col-md-12" >
-                            <div class="square"></div>
-                        </div>
-
-                         <div class="col-md-12" >
-                            <div class="square"></div>
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
                         </div>
                     </div>
 
-                </div>
-            </div> <!--End square_container -->
-        </div>    <!--End row-->
+                    <div id="thursday_Column" class="col-md-2">
+                        <div class="overview col-md-12" >
+                            <p>Thursday</p><div class="square"><p>0</p></div>
+                        </div>
+
+                        <div class="tests">
+                            <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div id="friday_Column" class="col-md-2">
+                        <div class="overview col-md-12" >
+                            <p>Friday</p><div class="square fail"><p>13</p></div>
+                        </div>
+
+                        <div class="tests">
+                            <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div class="square passed"><p>0</p></div>
+                            </div>
+
+                             <div class="col-md-12" >
+                                <div id="failedButton" class="square fail"><p>13</p></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                
+          </div> <!--End square_container -->
+      </div>    <!--End row-->
+        
+
+
         <div id="passedTest" style ="display: none;" > <!-- Start container passed test-->
             <div class="row">
-                <div class="col-md-2">
-                    <button type="button" class="button btn btn-success"><h2>RT</h2></button>
-                </div>
-                <div class="col-md-7">
-                    <h1>Information about passed tests</h1>
-                    <li class = "lista">Suit name:</li>
-                    <li class = "lista">Run by:</li>
-                    <li class = "lista">Time started:</li>
-                    <li class = "lista">Time finished:</li>
-                    <li class = "lista">Duration:</li>
-                </div>
-                <div class="col-md-3 search">
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
-                        </span>
-                        <input type="text" class="form-control" placeholder="Search for...">
-                    </div>
+            <div class="col-md-2">
+                <button type="button" class="button btn btn-success"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+            </div>
+            <div class="col-md-7">
+                <h1>Information about DMXC4BSP_SmokeTest_Basic</h1>
+                <li class = "lista">Suit name: <em>Smoke Test Suite</em></li>
+                <li class = "lista">Run by: <em>auto</em></li>
+                <li class = "lista">Time started: <em>2015-07-01 10:32:47</em></li>
+                <li class = "lista">Time finished: <em>2015-07-01- 11:06:26</em></li>
+                <li class = "lista">Duration: <em>0 h 33 m 39 s</em></li>
+            </div>
+            <div class="col-md-3 search">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search for...">
                 </div>
             </div>
-            <div class="row">
-                <div class="list-group orient">
-                  <a href="#" class="list-group-item list-group-item-success">test 1</a>
-                  <a href="#" class="list-group-item list-group-item-success">test 2</a>
-                  <a href="#" class="list-group-item list-group-item-success">test 3</a>
-                  <a href="#" class="list-group-item list-group-item-success">test 4</a>
-                </div>
+        </div>
+        <div class="row">
+            <div class="list-group orient">
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/1_testJumpStartOneShelf.log.html" class="list-group-item list-group-item-success">testJumpStartOneShelf(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestWithScripting)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/2_testConfigureCablesAndRoutedNBOnCmx.log.html" class="list-group-item list-group-item-success">testConfigureCablesAndRoutedNBOnCmx(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestRoutedNB)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/3_xtestNorthboundTrapReceiver.log.html" class="list-group-item list-group-item-success">xtestNorthboundTrapReceiver(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/4_testVersionInfo.log.html" class="list-group-item list-group-item-success">testVersionInfo(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)  </a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/5_test_BSP_FT_NTP_002.log.html" class="list-group-item list-group-item-success">test_BSP_FT_NTP_002(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestRoutedNB)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/6_test_DMX_BGC_CLI1S_005.log.html" class="list-group-item list-group-item-success">test_DMX_BGC_CLI1S_005(se.ericsson.jcat.bsp.ft.bgc.TenantTest)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/7_test_DMX_BGC_CLI1S_008.log.html" class="list-group-item list-group-item-success">test_DMX_BGC_CLI1S_008(se.ericsson.jcat.bsp.ft.bgc.TenantTest)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/8_test_BSP_MS_SM_017.log.html" class="list-group-item list-group-item-success">test_BSP_MS_SM_017(se.ericsson.jcat.bsp.ft.hw.HardwareManagement)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/9_testBugInfo.log.html" class="list-group-item list-group-item-success">testBugInfo(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/10_test_DMX_LOGD_LOG_001.log.html" class="list-group-item list-group-item-success">test_DMX_LOGD_LOG_001(se.ericsson.jcat.bsp.ft.log.LogTest)</a>
             </div>
+        </div>
         </div>  <!-- end container passed test-->
         <div id="failedTest" style ="display: none;"> 
-            <div class="row"> 
-                <div class="col-md-2">
-                    <button type="button" class="button btn btn-danger"><h2>RT</h2></button>
-                </div>
-                <div class="col-md-7">
-                <h1>Information about faild tests</h1>
-                <h3>First faild test information:</h3>
-                    <li class = "lista">Time:</li>
-                    <li class = "lista">Where has it failed:</li>
-                    <li class = "lista">What has failed:</li>
-                </div>
-                <div class="col-md-3 search">
-                    <div class="input-group">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
-                        </span>
-                        <input type="text" class="form-control" placeholder="Search for...">
-                    </div>
-                </div>
-            </div>
             <div class="row">
-                <div class="list-group orient">
-                  <a href="#" class="list-group-item list-group-item-danger">test 1</a>
-                  <a href="#" class="list-group-item list-group-item-danger">test 2</a>
-                  <a href="#" class="list-group-item list-group-item-success">test 3</a>
-                  <a href="#" class="list-group-item list-group-item-danger">test 4</a>
+            <div class="col-md-2">
+                <button type="button" class="button btn btn-danger"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+            </div>
+            <div class="col-md-7">
+            <h1>Information about JCAT_Execution_#93</h1>
+
+            <li class = "lista">Suit name: <em>BSP_RST_Nightly_Build</em></li>
+                <li class = "lista">Run by: <em>auto</em></li>
+                <li class = "lista">Time started: <em>2015-06-29 00:47:54</em></li>
+                <li class = "lista">Time finished: <em>2015-06-29 01:51:21</em></li>
+                <li class = "lista">Duration: <em>1 h 3 m 26 s</em></li>
+
+            </br>
+            <h4>First failed test information:</h4>
+                <li class = "lista">Time: <em>2015-06-29 13:37<em></li>
+                <li class = "lista">Failed test case: <em>test_BSP_UPG_BARE_004(se.ericsson.jcat.bsp.st.upg.Upgradability)</em></li>
+                <li class = "lista">Error message: <em>Router 0-26-static2 does not contain any user-defined IPv4 interface</em></li>
+            </div>
+            <div class="col-md-3 search">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Search for...">
                 </div>
             </div>
-        </div> <!--End not passed test-->
+        </div>
+        <div class="row">
+            <div class="list-group orient">
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/1_test_BSP_RBT_LOUNAB_001.log.html" class="list-group-item list-group-item-success">test_BSP_RBT_LOUNAB_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/2_test_BSP_RBT_LOUNAB_002.log.html" class="list-group-item list-group-item-success">test_BSP_RBT_LOUNAB_002(se.ericsson.jcat.bsp.st.rbt.Robustness)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/3_test_BSP_RBT_LOUNSB_001.log.html" class="list-group-item list-group-item-success">test_BSP_RBT_LOUNSB_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/9_test_BSP_RBT_SPWR_001.log.html" class="list-group-item list-group-item-success">test_BSP_RBT_SPWR_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/10_test_BSP_UPG_BARE_001.log.html" class="list-group-item list-group-item-success">test_BSP_UPG_BARE_001(se.ericsson.jcat.bsp.st.upg.Upgradability)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/12_test_BSP_UPG_BARE_004.log.html" class="list-group-item list-group-item-danger">test_BSP_UPG_BARE_004(se.ericsson.jcat.bsp.st.upg.Upgradability)</a>
+              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/13_test_BSP_USE_SYSVER_001.log.html" class="list-group-item list-group-item-success">test_BSP_USE_SYSVER_001(se.ericsson.jcat.bsp.st.use.Usability)</a>
+            </div><!--End not passed test-->
     </div> <!--End container -->
     
 </body>
