@@ -14,52 +14,38 @@
     <script type="js/model.js"></script>
     <script src="js/jquery-1.11.3.js"></script>
     <script>
-        $(document).ready(function(){
+        $(function(){
             $(".overview").click(function(){
                 $("~.tests",this).toggle();
             });
-        });
-    </script>
-        <script>
-        $(document).ready(function(){
             $(".passed").click(function(){
                 $("#passedTest").toggle();
                 $("#radiator").toggle();
             });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
+    
             $("#failedButton").click(function(){
                 $("#radiator").toggle();
                 $("#failedTest").toggle();
             });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
             $("button").click(function(){
-                 $("#radiator").toggle();
-                $(this).parent().parent().parent().toggle();
-            });
-        });
+                           $("#radiator").toggle();
+                          $(this).parent().parent().parent().toggle();
+                      });
+             
+                      $(".square").hover(function(){
+                          $(">p",this).toggle();
+                      });
+                  });
     </script>
-    <script>
-            $(document).ready(function(){
-                $(".square").hover(function(){
-                    $(">p",this).toggle();
-                });
-            });
-        </script>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
        <div id="radiator" class="row">
             <div id="sideText" class="col-md-1">
                 <p>Overview</p>
-                <p>ST</p>
-                <p>FT</p>
-                <p>RST</p>
+                <p>SMKT</p>
+                <p>FT/RT</p>
+                <p>RST/RT</p>
             </div>
             <div id="square_container" class="row col-md-11 container-fluid">
                     <div id="master_Column" class="col-md-2">
@@ -193,40 +179,90 @@
 
         <div id="passedTest" style ="display: none;" > <!-- Start container passed test-->
             <div class="row">
-            <div class="col-md-2">
-                <button type="button" class="button btn btn-success"><h2><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></h2></button>
-            </div>
-            <div class="col-md-7">
-                <h1>Information about DMXC4BSP_SmokeTest_Basic</h1>
-                <li class = "lista">Suit name: <em>Smoke Test Suite</em></li>
-                <li class = "lista">Run by: <em>auto</em></li>
-                <li class = "lista">Time started: <em>2015-07-01 10:32:47</em></li>
-                <li class = "lista">Time finished: <em>2015-07-01- 11:06:26</em></li>
-                <li class = "lista">Duration: <em>0 h 33 m 39 s</em></li>
-            </div>
-            <div class="col-md-3 search">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                    <input type="text" class="form-control" placeholder="Search for...">
+                <div class="col-md-3">
+                    <button type="button" class="button btn btn-success"><h2><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></h2></button>
                 </div>
+                    <div class="col-md-7">
+                        <h1>Information about DMXC4BSP_SmokeTest_Basic</h1>
+                        <li class = "lista">Suit name: <em>Smoke Test Suite</em></li>
+                        <li class = "lista">Run by: <em>auto</em></li>
+                        <li class = "lista">Time started: <em>2015-07-01 10:32:47</em></li>
+                        <li class = "lista">Time finished: <em>2015-07-01- 11:06:26</em></li>
+                        <li class = "lista">Duration: <em>0 h 33 m 39 s</em></li>
+                        <li class = "lista"><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/75/changes">Latest build</a></li>
+                    </div>
+                    <div class="col-md-2 search">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">Go!</button>
+                            </span>
+                            <input type="text" class="form-control" placeholder="Search for...">
+                        </div>
+                    </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="list-group orient">
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/1_testJumpStartOneShelf.log.html" class="list-group-item list-group-item-success">testJumpStartOneShelf(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestWithScripting)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/2_testConfigureCablesAndRoutedNBOnCmx.log.html" class="list-group-item list-group-item-success">testConfigureCablesAndRoutedNBOnCmx(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestRoutedNB)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/3_xtestNorthboundTrapReceiver.log.html" class="list-group-item list-group-item-success">xtestNorthboundTrapReceiver(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/4_testVersionInfo.log.html" class="list-group-item list-group-item-success">testVersionInfo(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)  </a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/5_test_BSP_FT_NTP_002.log.html" class="list-group-item list-group-item-success">test_BSP_FT_NTP_002(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestRoutedNB)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/6_test_DMX_BGC_CLI1S_005.log.html" class="list-group-item list-group-item-success">test_DMX_BGC_CLI1S_005(se.ericsson.jcat.bsp.ft.bgc.TenantTest)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/7_test_DMX_BGC_CLI1S_008.log.html" class="list-group-item list-group-item-success">test_DMX_BGC_CLI1S_008(se.ericsson.jcat.bsp.ft.bgc.TenantTest)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/8_test_BSP_MS_SM_017.log.html" class="list-group-item list-group-item-success">test_BSP_MS_SM_017(se.ericsson.jcat.bsp.ft.hw.HardwareManagement)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/9_testBugInfo.log.html" class="list-group-item list-group-item-success">testBugInfo(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/10_test_DMX_LOGD_LOG_001.log.html" class="list-group-item list-group-item-success">test_DMX_LOGD_LOG_001(se.ericsson.jcat.bsp.ft.log.LogTest)</a>
+            <div class="row">
+                <div class="col-md-12 oriented table-responsive">
+                    <table class= "table table-hover table-bordered">
+                        <tr>
+                            <td>Test</td>
+                            <td>Jcat-log</td>
+                            <td>Gerrit-log</td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>testJumpStartOneShelf(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestWithScripting)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/1_testJumpStartOneShelf.log.html" ><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/1_testJumpStartOneShelf.log.html" ><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>testConfigureCablesAndRoutedNBOnCmx(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestRoutedNB)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/2_testConfigureCablesAndRoutedNBOnCmx.log.html" ><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/2_testConfigureCablesAndRoutedNBOnCmx.log.html" ><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>xtestNorthboundTrapReceiver(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/3_xtestNorthboundTrapReceiver.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/3_xtestNorthboundTrapReceiver.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>testVersionInfo(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)  </p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/4_testVersionInfo.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/4_testVersionInfo.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>test_BSP_FT_NTP_002(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTestRoutedNB)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/5_test_BSP_FT_NTP_002.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/5_test_BSP_FT_NTP_002.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>test_DMX_BGC_CLI1S_005(se.ericsson.jcat.bsp.ft.bgc.TenantTest)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/6_test_DMX_BGC_CLI1S_005.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/6_test_DMX_BGC_CLI1S_005.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>test_DMX_BGC_CLI1S_008(se.ericsson.jcat.bsp.ft.bgc.TenantTest)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/7_test_DMX_BGC_CLI1S_008.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/7_test_DMX_BGC_CLI1S_008.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td> <p>test_BSP_MS_SM_017(se.ericsson.jcat.bsp.ft.hw.HardwareManagement)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/8_test_BSP_MS_SM_017.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/8_test_BSP_MS_SM_017.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>testBugInfo(se.ericsson.jcat.bsp.ft.jumpstart.JumpstartTest)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/9_testBugInfo.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/9_testBugInfo.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+                        <tr class="success">
+                            <td><p>test_DMX_LOGD_LOG_001(se.ericsson.jcat.bsp.ft.log.LogTest)</p></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/10_test_DMX_LOGD_LOG_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                            <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_Build_DMXC4BSP_SmokeTest_Basic/lastSuccessfulBuild/artifact/JCAT-Logs/10_test_DMX_LOGD_LOG_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        </tr>
+
+                    </table>
+                    
+              </div>
             </div>
-        </div>
         </div>  <!-- end container passed test-->
         <div id="failedTest" style ="display: none;"> 
             <div class="row">
@@ -241,6 +277,8 @@
                 <li class = "lista">Time started: <em>2015-06-29 00:47:54</em></li>
                 <li class = "lista">Time finished: <em>2015-06-29 01:51:21</em></li>
                 <li class = "lista">Duration: <em>1 h 3 m 26 s</em></li>
+                <li class = "lista"><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/changes">Latest build</a></li>
+
 
             </br>
             <h4>First failed test information:</h4>
@@ -258,15 +296,50 @@
             </div>
         </div>
         <div class="row">
-            <div class="list-group orient">
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/1_test_BSP_RBT_LOUNAB_001.log.html" class="list-group-item list-group-item-success">test_BSP_RBT_LOUNAB_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/2_test_BSP_RBT_LOUNAB_002.log.html" class="list-group-item list-group-item-success">test_BSP_RBT_LOUNAB_002(se.ericsson.jcat.bsp.st.rbt.Robustness)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/3_test_BSP_RBT_LOUNSB_001.log.html" class="list-group-item list-group-item-success">test_BSP_RBT_LOUNSB_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/9_test_BSP_RBT_SPWR_001.log.html" class="list-group-item list-group-item-success">test_BSP_RBT_SPWR_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/10_test_BSP_UPG_BARE_001.log.html" class="list-group-item list-group-item-success">test_BSP_UPG_BARE_001(se.ericsson.jcat.bsp.st.upg.Upgradability)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/12_test_BSP_UPG_BARE_004.log.html" class="list-group-item list-group-item-danger">test_BSP_UPG_BARE_004(se.ericsson.jcat.bsp.st.upg.Upgradability)</a>
-              <a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/13_test_BSP_USE_SYSVER_001.log.html" class="list-group-item list-group-item-success">test_BSP_USE_SYSVER_001(se.ericsson.jcat.bsp.st.use.Usability)</a>
-            </div><!--End not passed test-->
+            <div class="col-md-12 oriented table-responsive">
+                  <table class= "table table-hover table-bordered">
+                    <tr>
+                        <td>Test</td>
+                        <td>Jcat-log</td>
+                        <td>Gerrit-log</td>
+                    </tr>
+                    <tr class="success">
+                        <td><p>test_BSP_RBT_LOUNAB_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</p></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/1_test_BSP_RBT_LOUNAB_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/1_test_BSP_RBT_LOUNAB_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                    </tr>
+                    <tr class="success">
+                        <td><p>test_BSP_RBT_LOUNAB_002(se.ericsson.jcat.bsp.st.rbt.Robustness)</p></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/2_test_BSP_RBT_LOUNAB_002.log.html" ><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/2_test_BSP_RBT_LOUNAB_002.log.html" ><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                    </tr>
+                    <tr class="success">
+                        <td><p>test_BSP_RBT_LOUNSB_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</p></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/3_test_BSP_RBT_LOUNSB_001.log.html" ><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/3_test_BSP_RBT_LOUNSB_001.log.html" ><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                    </tr>
+                    <tr class="success">
+                        <td><p>test_BSP_RBT_SPWR_001(se.ericsson.jcat.bsp.st.rbt.Robustness)</p></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/9_test_BSP_RBT_SPWR_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/9_test_BSP_RBT_SPWR_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                    </tr>
+                    <tr class="success">
+                        <td><p>test_BSP_UPG_BARE_001(se.ericsson.jcat.bsp.st.upg.Upgradability)</p></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/10_test_BSP_UPG_BARE_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/10_test_BSP_UPG_BARE_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                    </tr>
+                    <tr class="danger">
+                        <td><p>test_BSP_UPG_BARE_004(se.ericsson.jcat.bsp.st.upg.Upgradability)</p></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/12_test_BSP_UPG_BARE_004.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/12_test_BSP_UPG_BARE_004.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                    </tr>
+                    <tr class="success">
+                        <td><p>test_BSP_USE_SYSVER_001(se.ericsson.jcat.bsp.st.use.Usability)</p></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/13_test_BSP_USE_SYSVER_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                        <td><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/93/artifact/JCAT-Logs/201506/BSP_RST_Nightly_Build_20150629004751/13_test_BSP_USE_SYSVER_001.log.html"><p><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></p></a></td>
+                    </tr>
+                </table>   
+        </div><!--End not passed test-->
     </div> <!--End container -->
     
 </body>

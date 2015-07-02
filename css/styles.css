@@ -103,11 +103,10 @@ code {
   width: 200px;
   height: 200px;
   margin-top: 20px;
-  margin-left: -95px;
+  margin-left: 10px;
 }
-.orient{
+.oriented{
   margin-top: 20px;
-  margin-left: -80px;
 }
 .failedItems{
     background-color: #5cb85c;
@@ -128,4 +127,8 @@ code {
       background-color: white;
       width: auto;
       height: auto;
+}
+.structure {
+  margin-left: -500px;
+    margin-right: -500px;
 }
