@@ -1,0 +1,202 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Radiator 2.0</title>
+        <!-- <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css"/>  -->
+        <link rel="stylesheet" href="grid_dan_maximized.css"/>
+        <script src="jquery-1.11.3.js"></script>
+        <script>
+            var window_height = $(window).height();
+            var window_width = $(window).width();
+            var border_width = 4;
+            var n_columns = 6;
+            var n_rows = 4;
+            var line_height = 30;
+            var line_width = 66;
+
+            // var square_side = window_height*0.9/4-2;
+            var rect_height = (window_height*0.8-1)/n_rows;
+            var rect_width = (window_width*0.8-border_width*2*n_columns)/n_columns;
+
+            var center_X = (window_width-rect_width*n_columns-border_width*2*n_columns)/2;
+            var center_Y = (window_height - rect_height*n_rows-border_width*2*n_rows)/2-line_height;
+
+
+
+            // var sidebar_height = rect_height*4+6;
+            // var sidebar_width = (window_width*0.2-29)/2;
+
+            // var topbar_height = (window_height*0.2-7)/2;
+            // var topbar_width = window_width;
+            
+            $(document).ready(function(){
+                 $('.square').css("height",rect_height);
+                 $('.square').css("width",rect_width);
+
+                 $('#grid_container').css("left",center_X);
+                 $('#grid_container').css("top",center_Y);
+
+                 $('#container').css("height",window_height);
+                 $('#container').css("width",window_width);
+
+                 $('#sidebar').css("height",rect_height*n_rows+border_width*2*n_rows);
+
+            
+                 // $('#sidebar').css("height",sidebar_height);
+                 // $('#sidebar').css("width", sidebar_width);
+            
+                 // $('#topbar').css("height", topbar_height);
+                 // $('#topbar').css("width", topbar_width);
+            
+                  $(".overview").click(function(){
+                     $("~.tests",this).toggle();
+                 });
+            });
+            
+        </script>
+    </head>
+    <body>
+        <!-- Start container -->
+        <div id="container" class="container-fluid" >
+
+                    <ul id="sidebar" class="center-vertically">
+                        <li>Overview</li>
+                        <li class="hidden-text-label">SMKT</li>
+                        <li class="hidden-text-label">FT/RT</li>
+                        <li>RST/RT</li>
+                    </ul>
+
+                <!-- Start grid_container  -->
+                <div id="grid_container"  class="container-fluid col-md-10">
+                    
+                   
+                    <div class="row">
+
+                        <!-- Start master column -->
+                        <div class="column-fluid col-md-2">
+                            <p>Master</p>
+                            <div class="col-md-12 overview">
+                                <div class="square"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End master column -->
+
+                        <!-- Start monday column -->
+                        <div class="column-fluid col-md-2">
+                            <p>Monday</>
+                            <div class="col-md-12 overview">
+                                <div class="square failed"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square failed"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End monday column -->
+
+                        <!-- Start tuesday column -->
+                        <div class="column-fluid col-md-2">
+                            <p>Tuesday</p>
+                            <div class="col-md-12 overview">
+                                <div class="square"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End tuesday column -->
+
+                        <!-- Start wednesday column -->
+                        <div class="column-fluid col-md-2">
+                            <p>Wednesday</p>
+                            <div class="col-md-12 overview">
+                                <div class="square"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End wednesday column -->
+
+                        <!-- Start thursday column -->
+                        <div class="column-fluid col-md-2">
+                            <p>Thursday</p>
+                            <div class="col-md-12 overview">
+                                <div class="square"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End thursday column -->
+
+                        <!-- Start friday column -->
+                        <div class="column-fluid col-md-2">
+                            <p>Friday</p>
+                            <div class="col-md-12 overview">
+                                <div class="square"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End friday column -->
+
+                    </div>
+                </div>
+                <!-- End grid_container -->
+
+        </div>
+        <!-- End container -->
+    </body>
+</html>
