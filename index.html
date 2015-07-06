@@ -30,16 +30,16 @@
     var center_Y = (window_height - rect_height*n_rows-border_width*2*n_rows)/2-line_height;
     
     $(document).ready(function(){
-         $('.square').css("height",rect_height);
-         $('.square').css("width",rect_width);
+         // $('.square').css("height",rect_height);
+         // $('.square').css("width",rect_width);
 
-         $('#grid_container').css("left",center_X);
-         $('#grid_container').css("top",center_Y);
+         // $('#grid_container').css("left",center_X);
+         // $('#grid_container').css("top",center_Y);
 
-         $('#container').css("height",window_height);
-         $('#container').css("width",window_width);
+         // $('#container').css("height",window_height);
+         // $('#container').css("width",window_width);
 
-         $('#sidebar').css("height",rect_height*n_rows+border_width*2*n_rows);
+         // $('#sidebar').css("height",rect_height*n_rows+border_width*2*n_rows);
     
          $(".overview").click(function(){
              $("~.tests",this).toggle();
@@ -70,18 +70,15 @@
        <div id="radiator" >
 
                     <ul id="sidebar" class="center-vertically">
-                        <li>Overview</li>
-                        <li class="hidden-text-label">SMKT</li>
-                        <li class="hidden-text-label">FT/RT</li>
-                        <li>RST/RT</li>
+                        <li id="overview">Overview</li>
+                        <li id="SMKT">SMKT</li>
+                        <li id="FTRT">FT/RT</li>
+                        <li id="RSTRT">RST/RT</li>
                     </ul>
 
                 <!-- Start grid_container  -->
                 <div id="grid_container">
-                    
-                   
                     <div>
-
                         <!-- Start master column -->
                         <div>
                             <p>Master</p>
