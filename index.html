@@ -8,16 +8,43 @@
     <title>Radiator 2.0</title>
     <link rel="stylesheet" href="css/styles.css"</link>
     <link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css"/> 
-    <link rel="stylesheet" href="css/grid_dan.css"/>
+    <link rel="stylesheet" href="grid_dan_maximized.css"/>
     <script type="js/view.js"></script> 
     <script type="js/viewController.js"></script>
     <script type="js/model.js"></script>
     <script src="js/jquery-1.11.3.js"></script>
     <script>
-        $(function(){
-            $(".overview").click(function(){
-                $("~.tests",this).toggle();
-            });
+    var window_height = $(window).height();
+    var window_width = $(window).width();
+    var border_width = 7;
+    var n_columns = 6;
+    var n_rows = 4;
+    var line_height = 30;
+    var line_width = 66;
+
+    // var square_side = window_height*0.9/4-2;
+    var rect_height = (window_height*0.8-1)/n_rows;
+    var rect_width = (window_width*0.8-border_width*2*n_columns)/n_columns;
+
+    var center_X = (window_width-rect_width*n_columns-border_width*2*n_columns)/2;
+    var center_Y = (window_height - rect_height*n_rows-border_width*2*n_rows)/2-line_height;
+    
+    $(document).ready(function(){
+         $('.square').css("height",rect_height);
+         $('.square').css("width",rect_width);
+
+         $('#grid_container').css("left",center_X);
+         $('#grid_container').css("top",center_Y);
+
+         $('#container').css("height",window_height);
+         $('#container').css("width",window_width);
+
+         $('#sidebar').css("height",rect_height*n_rows+border_width*2*n_rows);
+    
+         $(".overview").click(function(){
+             $("~.tests",this).toggle();
+         });
+            
             $(".passed").click(function(){
                 $("#passedTest").toggle();
                 $("#radiator").toggle();
@@ -40,140 +67,147 @@
 </head>
 <body>
     <div class="container-fluid">
-       <div id="radiator" class="row">
-            <div id="sideText" class="col-md-1">
-                <p>Overview</p>
-                <p>SMKT</p>
-                <p>FT/RT</p>
-                <p>RST/RT</p>
-            </div>
-            <div id="square_container" class="row col-md-11 container-fluid">
-                    <div id="master_Column" class="col-md-2">
-                        <div class="overview col-md-12" >
-                            <p>Master</p><div class="square"><p>0</p></div>
+       <div id="radiator" >
+
+                    <ul id="sidebar" class="center-vertically">
+                        <li>Overview</li>
+                        <li class="hidden-text-label">SMKT</li>
+                        <li class="hidden-text-label">FT/RT</li>
+                        <li>RST/RT</li>
+                    </ul>
+
+                <!-- Start grid_container  -->
+                <div id="grid_container">
+                    
+                   
+                    <div>
+
+                        <!-- Start master column -->
+                        <div>
+                            <p>Master</p>
+                            <div class="overview" >
+                                <div class="square"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
                         </div>
+                        <!-- End master column -->
 
-                        <div class="tests">
-                            <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
+                        <!-- Start monday column -->
+                        <div >
+                            <p>Monday</p>
+                            <div class="overview">
+                                <div class="square failed"><p>13</p></div>
                             </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
+                            <div class="tests">
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                                <div  id="failedButton">
+                                    <div class="square failed"><p>13</p></div>
+                                </div>
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
                             </div>
                         </div>
+                        <!-- End monday column -->
+
+                        <!-- Start tuesday column -->
+                        <div>
+                            <p>Tuesday</p>
+                            <div class="overview">
+                                <div class="square"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End tuesday column -->
+
+                        <!-- Start wednesday column -->
+                        <div>
+                            <p>Wednesday</p>
+                            <div class="overview">
+                                <div class="square"></div>
+                            </div>
+                              <div class="tests">
+                                  <div class="passed">
+                                      <div class="square"></div>
+                                  </div>
+                                  <div class="passed">
+                                      <div class="square"></div>
+                                  </div>
+                                  <div class="passed">
+                                      <div class="square"></div>
+                                  </div>
+                              </div>
+                        </div>
+                        <!-- End wednesday column -->
+
+                        <!-- Start thursday column -->
+                        <div>
+                            <p>Thursday</p>
+                            <div class="overview">
+                                <div class="square"></div>
+                            </div>
+                            <div class="tests">
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                                <div class="passed">
+                                    <div class="square"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End thursday column -->
+
+                        <!-- Start friday column -->
+                        <div>
+                            <p>Friday</p>
+                            <div class="overview">
+                                <div class="square"></div>
+                            </div>
+                           <div class="tests">
+                               <div class="passed">
+                                   <div class="square"></div>
+                               </div>
+                               <div class="passed">
+                                   <div class="square"></div>
+                               </div>
+                               <div class="passed">
+                                   <div class="square"></div>
+                               </div>
+                           </div>
+                        </div>
+                        <!-- End friday column -->
+
                     </div>
+                </div>
+                <!-- End grid_container -->
 
-                    <div id="monday_Column" class="col-md-2">
-                        <div class="overview col-md-12" >
-                            <p>Monday</p><div class="square"><p>0</p></div>
-                        </div>
-
-                        <div class="tests">
-                            <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div id="tuesday_Column" class="col-md-2">
-                        <div class="overview col-md-12" >
-                            <p>Tuesday</p><div class="square"><p>0</p></div>
-                        </div>
-
-                        <div class="tests">
-                            <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                    <div id="wedneday_Column" class="col-md-2">
-                        <div class="overview col-md-12" >
-                            <p>Wednesday</p><div class="square"><p>0</p></div>
-                        </div>
-
-                        <div class="tests">
-                            <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="thursday_Column" class="col-md-2">
-                        <div class="overview col-md-12" >
-                            <p>Thursday</p><div class="square"><p>0</p></div>
-                        </div>
-
-                        <div class="tests">
-                            <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-                        </div>    
-                    </div>
-
-                    <div id="friday_Column" class="col-md-2">
-                        <div class="overview col-md-12" >
-                            <p>Friday</p><div class="square fail"><p>13</p></div>
-                        </div>
-
-                        <div class="tests">
-                            <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div class="square passed"><p>0</p></div>
-                            </div>
-
-                             <div class="col-md-12" >
-                                <div id="failedButton" class="square fail"><p>13</p></div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                
-          </div> <!--End square_container -->
-      </div>    <!--End row-->
+        </div>
+        <!-- End container -->
         
 
 

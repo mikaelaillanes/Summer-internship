@@ -99,11 +99,19 @@ code {
  	padding: 10px;
  	background-color: gray;
 }
-.button{
-  width: 200px;
-  height: 200px;
+#passedTest .button{
+  width:150px;
+  height: 150px;
   margin-top: 20px;
   margin-left: 10px;
+  background-color: #96BF48;
+}
+#failedTest .button{
+  width:150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: #FF4F34;
 }
 .oriented{
   margin-top: 20px;
