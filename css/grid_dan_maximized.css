@@ -1,126 +1,147 @@
 html, body{
-    margin:0;
-    /*padding: 0;*/
-    /*border: 0;*/
-}
 
+}
 body{
     background-color: white;
 }
+/*Default paragraph styles*/
+p {
+  font-family: inherit;
+  font-weight: normal;
+  color: #7d7d7d;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility; 
+  }
+  p.lead {
+    font-size: 1.21875rem;
+    line-height: 1.6; }
+  p aside {
+    font-size: 1rem;
+    line-height: 1.35;
+    font-style: italic; }
 
-#radiator{
-  height: 100vh;
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #222222;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4; }
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  font-size: 60%;
+  color: #6f6f6f;
+  line-height: 0; }
 
+h1 {
+  font-size: 2.125rem; 
+  color: white;}
+
+h2 {
+  font-size: 1.6875rem; }
+
+h3 {
+  font-size: 1.375rem;
+  color: #fb7725; }
+
+h4 {
+  font-size: 1.125rem; }
+
+h5 {
+  font-size: 1.125rem; }
+
+h6 {
+  font-size: 1rem; }
+
+.subheader {
+  line-height: 1.4;
+  color: #6f6f6f;
+  font-weight: normal;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem; }
+
+hr {
+  border: solid #dddddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0; }
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit; }
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit; }
+
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+code {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-weight: bold;
+  color: #bd260d; }
+
+.test{
+	width:20px;
+ 	height: 100px;
+ 	margin-top: 20px;
+ 	margin-right: 20px;
+ 	padding: 10px;
+ 	background-color: gray;
+}
+#passedTest .button{
+  width:100px;
+  height: 75px;
+  margin-top: 20px;
+  background-color: #96BF48;
+}
+#failedTest .button{
+  width:150px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 10px;
+  background-color: #FF4F34;
+}
+.oriented{
+  margin-top: 20px;
+}
+.failedItems{
+    background-color: #5cb85c;
+}
+.search {
+  margin-top: 20px;
+}
+.lista {
+   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #7d7d7d;
+  text-rendering: optimizeLegibility;
+  line-height: 1.4;
+  margin-left: 40px;
+}
+.passedTest {
+      background-color: white;
+      width: auto;
+      height: auto;
+}
+.structure {
+  margin-left: -500px;
+    margin-right: -500px;
 }
 
-/*Creates a square*/
-.square{
-    /*height:100%;*/
-    background: #96BF48;
-    cursor: pointer;
-    border-style: solid;
-    border-width: 0.2vw;
-    border-color: white;
-    float: left;
-    height: calc(100vh*0.8/4);
-    width: calc(100vw*0.8/6);
-}
-
-.square:hover{
-    background-color: #009E00;
-}
-
-.failed{
-    background-color: #FF4F34;
-}
-
-.failed:hover{
-    background-color: #C60000;
-}
-
-#grid_container > div >div{
-    float: left;
-}
-
-.tests{
-    display: none;
-}
-
-#grid_container{
-    position: absolute;
-    top: calc(100vh*0.1/2);
-    left: calc(100vw*0.2/2);
-}
-
-#grid_container p {
-    margin: 0px;  
-    text-align: center;
-}
-#overview{
+#testTable{
   position: relative;
-
-}
-
-#sidebar{
-    position: absolute;
-    top:48vh;
-    height: 83vh;
-    padding-left: 1.9vw;
-    text-align: center;
-}
-
-#sidebar li, #grid_container >div>div> p{
-    font-size:1.5vw;
-    font-weight: bolder;
-    font-family:Arial;
-    color:#0051BA;
-}
-
-
-.center-vertically{
-    position: relative;
-    top: 50%;
-  transform: translateY(-50%); 
-
-}
-
-ul{
-    /*background-color: green;*/
-    display: table;
-    margin:0;
-    /*top: 10vh;*/
-    /*position: absolute;*/
-}
-#sidebar li {
-    display: table-row;
-    /*line-height: 200px;*/
-}
-
-#sidebar li:before {
-   content: "";
-   display: block;
-   height: 10vh;
-}
-
-/*ul {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  height: 50px;
-  top: 50px;
-  text-align: right;
-}*/
-.square > p{
- /*   display: flex;
-    justify-content: center;
-    flex-direction: column;*/
-    /*height: 100px;*/
-    line-height: calc(100vh*0.8/4);
-    font-size: calc(100vh*0.8/4*0.8);
-    display: none;
-    color: white;
-
+  top: 5vh;
+  margin-left:  calc(50vw*3/12);
 }
