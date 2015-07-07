@@ -27,16 +27,6 @@
     var center_Y = (window_height - rect_height*n_rows-border_width*2*n_rows)/2-line_height;
     
     $(document).ready(function(){
-         // $('.square').css("height",rect_height);
-         // $('.square').css("width",rect_width);
-
-         // $('#grid_container').css("left",center_X);
-         // $('#grid_container').css("top",center_Y);
-
-         // $('#container').css("height",window_height);
-         // $('#container').css("width",window_width);
-
-         // $('#sidebar').css("height",rect_height*n_rows+border_width*2*n_rows);
     
          $(".overview").click(function(){
              $("~.tests",this).toggle();
@@ -64,7 +54,7 @@
 </head>
 <body>
     <div class="container-fluid">
-       <div id="radiator" >
+       <div id="radiator"  >
 
                     <ul id="sidebar" class="center-vertically">
                         <li id="overview">Overview</li>
@@ -207,19 +197,7 @@
 
         <div id="passedTest" style ="display: none;" > <!-- Start container passed test-->
             <div class="row">
-                <div class="col-md-3">
-                    <button type="button" class="button btn btn-success"><h2><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></h2></button>
-                </div>
-                    <div class="col-md-7">
-                        <h1>Information about DMXC4BSP_SmokeTest_Basic</h1>
-                        <li class = "lista">Suit name: <em>Smoke Test Suite</em></li>
-                        <li class = "lista">Run by: <em>auto</em></li>
-                        <li class = "lista">Time started: <em>2015-07-01 10:32:47</em></li>
-                        <li class = "lista">Time finished: <em>2015-07-01- 11:06:26</em></li>
-                        <li class = "lista">Duration: <em>0 h 33 m 39 s</em></li>
-                        <li class = "lista"><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/75/changes">Latest build</a></li>
-                    </div>
-                    <div class="col-md-2 search">
+                 <div class="col-md-3 search pull-right">
                         <div class="input-group">
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="button">Go!</button>
@@ -229,8 +207,23 @@
                     </div>
             </div>
             <div class="row">
-                <div class="col-md-12 oriented table-responsive">
-                    <table class= "table table-hover table-bordered">
+                <div class="col-md-2 col-md-offset-2">
+                    <button type="button" class="button btn btn-success"><h2><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></h2></button>
+                </div>
+                    <div class="col-md-7">
+                        <h1>DMXC4BSP_SmokeTest_Basic</h1>
+                        <li class = "lista">Suit name: <em>Smoke Test Suite</em></li>
+                        <li class = "lista">Run by: <em>auto</em></li>
+                        <li class = "lista">Time started: <em>2015-07-01 10:32:47</em></li>
+                        <li class = "lista">Time finished: <em>2015-07-01- 11:06:26</em></li>
+                        <li class = "lista">Duration: <em>0 h 33 m 39 s</em></li>
+                        <li class = "lista"><a href="https://eis-jenkins-bnet-ducn-ei-switching.rnd.ki.sw.ericsson.se/job/BSP_RST_JCAT_Execution/75/changes">Latest build</a></li>
+                    </div>
+                   
+            </div>
+            <div class="row">
+                <div id="testTable" class="col-md-9 oriented table-responsive">
+                    <table  class="table table-hover table-bordered">
                         <tr>
                             <td>Test</td>
                             <td>Jcat-log</td>
